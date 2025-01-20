@@ -126,7 +126,7 @@ p {
 }
 
 .image2 {
-  width:60%
+  width:100%
 }
 
 .image3 {
@@ -150,14 +150,16 @@ p {
   gap: 20px; /* 두 div 사이 간격 */
   align-items: center; /* 세로 중앙 정렬 */
   height: auto;
+  margin-bottom: 3%;
 }
 
 .horizontal-container .text-container {
   flex: 1; /* 텍스트 영역이 더 넓게 차지하도록 */
+  margin-bottom: 0;
 }
 
 .horizontal-container .img-container {
-  flex: 0.5;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
