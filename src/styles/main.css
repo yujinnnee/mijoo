@@ -1,3 +1,8 @@
+:root {
+  --highlight-color: #0041b9;
+  --background-color: #041824;
+}
+
 @font-face {
   font-family: 'NanumGothicBold';
   src: url('../fonts/NanumGothicBold.otf') format('truetype');
@@ -6,9 +11,8 @@
 }
 
 body {
-  font-family: 'NanumGothicBold', sans-serif;
+  /* font-family: 'NanumGothicBold', sans-serif; */
   margin: 0;
-  font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -59,14 +63,6 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 0.5s ease;
-}
-
-section.show {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .container {
@@ -113,6 +109,29 @@ p {
   color: #666;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.highlight {
+  color: var(--highlight-color);
+}
+
 .text-container {
   margin-bottom: 3%;
+}
+
+.horizontal-container {
+  display: flex;
+  gap: 20px; /* 두 div 사이 간격 */
+  align-items: center; /* 세로 중앙 정렬 */
+  height: auto;
+}
+
+.horizontal-container .text-container {
+  flex: 1; /* 텍스트 영역이 더 넓게 차지하도록 */
+}
+
+.horizontal-container .img-container {
+  flex: 0.5;
 }
