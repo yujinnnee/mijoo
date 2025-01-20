@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fdfcf9;
-  color: #333;
+  background-color: #041824;
+  color: #fff;
   overflow-x: hidden;
 }
 
@@ -15,49 +15,42 @@ h1, h2 {
   margin: 0 0 30px;
 }
 
+header .logo {
+  height: 100%; /* 부모 컨테이너 높이에 맞춤 */
+}
+
+header .banner {
+  width: 100%; /* 가로를 100%로 설정 */
+  max-width: 800px; /* 가로 크기 제한 */
+  height: auto; /* 비율 유지 */
+  margin: 0 auto;
+}
+
 header {
-  position: relative;
-  width: 100%;
-  height: 60vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
-  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #041824;
+  padding: 10px 30px;
+  gap: 20px; 
+  height: 170px; /* header 높이 설정 */
 }
 
-.header-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+header .logo,
+header .banner {
+  align-self: center; /* Align both logo and banner consistently */
 }
 
-.header-text {
-  color: #fff;
-  z-index: 1;
+header .snsIcons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
-.header-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.header-text p {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-.btn {
-  background-color: #8c755c;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  display: inline-block;
-  font-weight: bold;
+header .snsIcons img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
 }
 
 .section1, .section2, .section3, .section4 {
@@ -82,7 +75,6 @@ section.show {
 }
 
 .section1 {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +100,6 @@ section.show {
 .text-container p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #555;
   margin-bottom: 20px;
 }
 
@@ -123,19 +114,6 @@ section.show {
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.section2 {
-  background-color: #f9f5ee;
-}
-
-.section3 {
-  background-color: #fdfcf9;
-}
-
-.section4 {
-  background-color: #f9f5ee;
-  margin-top: 0;
 }
 
 .info-box {
@@ -171,13 +149,13 @@ section.show {
 
 .service-box {
   background-color: #fff;
-  border: 1px solid #e0d9ce;
   border-radius: 5px;
   padding: 20px;
   width: 100%;
   max-width: 250px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  color: #041824;
 }
 
 .service-box h3 {
@@ -202,7 +180,6 @@ section.show {
 }
 
 footer {
-  background-color: #333;
   color: #fff;
   text-align: center;
   padding: 15px 10px;
@@ -212,21 +189,4 @@ footer {
 
 .contact {
   text-align: center;
-}
-
-@media (max-width: 768px) {
-  .section1 {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .content-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .text-container,
-  .img-container {
-    width: 100%;
-  }
 }
