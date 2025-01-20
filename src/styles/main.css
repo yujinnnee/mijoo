@@ -121,6 +121,30 @@ p {
   margin-bottom: 3%;
 }
 
+.image1 {
+  width:80%
+}
+
+.image2 {
+  width:60%
+}
+
+.image3 {
+  width:80%
+}
+
+.image4 {
+  width:80%
+}
+
+.image5 {
+  width:80%
+}
+
+.image6 {
+  width:90%
+}
+
 .horizontal-container {
   display: flex;
   gap: 20px; /* 두 div 사이 간격 */
@@ -134,4 +158,88 @@ p {
 
 .horizontal-container .img-container {
   flex: 0.5;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* 기본 폰트 크기 조정 */
+  }
+
+  header {
+    flex-direction: column; /* 수직 정렬 */
+    height: auto; /* 높이를 자동으로 조정 */
+    padding: 20px; /* 여백 추가 */
+    gap: 10px;
+  }
+
+  header .logo {
+    height: auto; /* 자동 크기 조정 */
+    width: 80%; /* 로고 가로 크기 조정 */
+    align-self: center;
+  }
+
+  header .banner {
+    max-width: 90%; /* 배너 크기 제한 */
+    margin: 10px auto; /* 상하 여백 추가 */
+  }
+
+  header .snsIcons {
+    gap: 20px; /* 아이콘 간격 조정 */
+  }
+
+  header .snsIcons img {
+    width: 50px; /* 아이콘 크기 축소 */
+    height: 50px;
+  }
+
+  section {
+    padding: 5% 2%; /* 섹션 여백 조정 */
+  }
+
+  .container {
+    width: 90%; /* 컨테이너 가로 폭 조정 */
+    gap: 15px; /* 간격 축소 */
+  }
+
+  .img-container {
+    width: 100%; /* 이미지 컨테이너 가로 100% */
+  }
+
+  .img-container img {
+    width: 100%; /* 이미지 크기 제한 */
+    height: auto; /* 비율 유지 */
+  }
+
+  h1 {
+    font-size: 2rem; /* 가장 큰 제목 크기 축소 */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* 중간 제목 크기 축소 */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* 소제목 크기 축소 */
+  }
+
+  h4 {
+    font-size: 1rem; /* 소제목 크기 축소 */
+  }
+
+  p {
+    font-size: 0.9rem; /* 일반 텍스트 크기 축소 */
+  }
+
+  .horizontal-container {
+    flex-direction: column; /* 세로 배치로 변경 */
+    gap: 15px; /* 간격 축소 */
+  }
+
+  .horizontal-container .text-container {
+    width: 100%; /* 텍스트 영역 가로 100% */
+  }
+
+  .horizontal-container .img-container {
+    width: 100%; /* 이미지 컨테이너 가로 100% */
+  }
 }
